@@ -1,0 +1,66 @@
+export const themes = {
+  gradient: {
+    id: 'gradient',
+    name: 'Gradient',
+    bg: 'bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500',
+    card: 'bg-white/10 backdrop-blur-lg border-white/20',
+    text: 'text-white',
+    input: 'bg-white/10 border-white/30 text-white placeholder-white/50',
+    button: 'bg-gradient-to-r from-purple-600 to-pink-600',
+    accent: 'purple',
+  },
+  black: {
+    id: 'black',
+    name: 'Black Theme',
+    bg: 'bg-black',
+    card: 'bg-zinc-900/95 backdrop-blur-sm border-zinc-800',
+    text: 'text-white',
+    input: 'bg-zinc-800/80 border-zinc-700 text-white placeholder-zinc-400 focus:bg-zinc-800',
+    button: 'bg-white text-black hover:bg-zinc-100',
+    accent: 'zinc',
+  },
+  dark: {
+    id: 'dark',
+    name: 'Dark Blue',
+    bg: 'bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900',
+    card: 'bg-slate-800/80 backdrop-blur-lg border-slate-700',
+    text: 'text-white',
+    input: 'bg-slate-700/50 border-slate-600 text-white placeholder-slate-400',
+    button: 'bg-gradient-to-r from-blue-600 to-cyan-600',
+    accent: 'blue',
+  },
+  ocean: {
+    id: 'ocean',
+    name: 'Ocean',
+    bg: 'bg-gradient-to-br from-blue-900 via-teal-800 to-cyan-900',
+    card: 'bg-teal-900/30 backdrop-blur-lg border-teal-700/50',
+    text: 'text-white',
+    input: 'bg-teal-800/30 border-teal-600/50 text-white placeholder-teal-300/50',
+    button: 'bg-gradient-to-r from-teal-600 to-cyan-600',
+    accent: 'teal',
+  },
+  sunset: {
+    id: 'sunset',
+    name: 'Sunset',
+    bg: 'bg-gradient-to-br from-orange-500 via-red-500 to-pink-600',
+    card: 'bg-red-900/20 backdrop-blur-lg border-orange-400/30',
+    text: 'text-white',
+    input: 'bg-red-900/20 border-orange-400/30 text-white placeholder-orange-200/50',
+    button: 'bg-gradient-to-r from-orange-600 to-red-600',
+    accent: 'orange',
+  },
+  forest: {
+    id: 'forest',
+    name: 'Forest',
+    bg: 'bg-gradient-to-br from-green-900 via-emerald-800 to-teal-900',
+    card: 'bg-emerald-900/30 backdrop-blur-lg border-emerald-700/50',
+    text: 'text-white',
+    input: 'bg-emerald-800/30 border-emerald-600/50 text-white placeholder-emerald-300/50',
+    button: 'bg-gradient-to-r from-green-600 to-emerald-600',
+    accent: 'green',
+  },
+};
+
+export type ThemeId = keyof typeof themes;
+
+export const getTheme = (themeId: ThemeId) => themes[themeId] || themes.gradient;
