@@ -35,3 +35,6 @@ ts-debug.log*
 /skills
 /template
 /spec
+
+.vercel
+.env*.local
